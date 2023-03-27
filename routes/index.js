@@ -3,7 +3,7 @@ const notes = require('./api/notes')
 
 const app = express();
 
-app.use('./notes', notes);
+app.use('./api/notes.js', notes);
 // const api = require('./api')
 
 module.exports = app;
