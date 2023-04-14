@@ -48,5 +48,3 @@ module.exports = fb;
 //         console.log(data);
 //     }));
 //   })
-
-// module.exports = router;
