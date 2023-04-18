@@ -5,12 +5,12 @@ const fs = require('fs');
 fb.get('/', (req, res) => {
   // console.info(`GET /api/note`);
   // res.status(200).json(note);
-  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+  readFromFile('../../db/db.json').then((data) => res.json(JSON.parse(data)))
 }); 
 
   fb.post('/', (req,res) => {
 
-    const db = fs.readFileSync('db/db.json');
+    const db = fs.readFileSync('../../db/db.json');
     db = JSON.parse(db);
     res.json(db)
     const newNote = {
@@ -20,7 +20,7 @@ fb.get('/', (req, res) => {
       unique: true,
     };
 
-    fs.writeFileSync(path.join('db/db.json', JSON.stringify(db)));
+    fs.writeFileSync(path.join('../../db/db.json', JSON.stringify(db)));
     db.push(newNote)
 });
 
