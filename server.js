@@ -19,13 +19,13 @@ app.get("/", (req, res) =>
   );
 
 // GET Route for note page
-app.get("/notes", (req, res) =>
+app.get("./routes/api/notes.js", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
-// app.get("/api/notes", (req, res) =>
-//   res.sendFile(path.join(__dirname, "./db/db.json"))
-// );
+app.get("./db/db.json", (req, res) =>
+  res.sendFile(path.join(__dirname, "./db/db.json"))
+);
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
