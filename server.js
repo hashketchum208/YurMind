@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const api = require("./routes/api/notes");
+const api = require("./routes/notes");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -19,7 +19,7 @@ app.get("/", (req, res) =>
   );
 
 // GET Route for note page
-app.get("./routes/api/notes.js", (req, res) =>
+app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 

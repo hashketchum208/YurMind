@@ -4,7 +4,7 @@ const {
   readFromFile,
   readAndAppend,
   writeToFile,
-} = require("../../helpers/fsUtils");
+} = require("../helpers/fsUtils");
 
 // GET Route for retrieving all the notes
 notes.get("/", (req, res) => {
@@ -76,3 +76,32 @@ module.exports = notes;
 //         console.log(data);
 //     }));
 //   })
+
+
+// const path = require('path');
+// const fb = require('express').Router();
+// const fs = require('fs');
+
+// fb.get('/', (req, res) => {
+//   // console.info(`GET /api/note`);
+//   // res.status(200).json(note);
+//   readFromFile('../../db/db.json').then((data) => res.json(JSON.parse(data)))
+// }); 
+
+//   fb.post('/', (req,res) => {
+
+//     const db = fs.readFileSync('../../db/db.json');
+//     db = JSON.parse(db);
+//     res.json(db)
+//     const newNote = {
+//       title: req.body.title,
+//       text: req.body.text,
+//       //will adding UUID fix this problem?/ what are some of the packages??
+//       unique: true,
+//     };
+
+//     fs.writeFileSync(path.join('../../db/db.json', JSON.stringify(db)));
+//     db.push(newNote)
+// });
+
+// module.exports = fb;
