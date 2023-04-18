@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "railway": "^2.0.17"
+    "railway": "^2.0.17",
+    "uuid": "^9.0.0"
   }
 }
