@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const api = require("./routes/api/notes");
-
 const PORT = 3000;
 
 const app = express();
@@ -11,8 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", api);
-
 app.use(express.static("public"));
+
 
 // GET Route for homepage
 app.get("/", (req, res) =>
@@ -31,3 +30,7 @@ app.get("/api/notes", (req, res) =>
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
+
+// sequelize.sync({ force: false }).then(() => {
+//   app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+// });
