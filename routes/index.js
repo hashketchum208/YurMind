@@ -1,7 +1,7 @@
 const express = require('express')
-const notes = require('./api/notes')
+const notes = require('/notes')
 const app = express();
 
-app.use('/api/notes', notes);
+app.use('/notes', notes);
 
 module.exports = app;
