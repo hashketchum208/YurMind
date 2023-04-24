@@ -1,5 +1,5 @@
 const express = require('express');
-const notes = require('./notes');
+const notes = require('./api/notes');
 const app = express();
 
 app.use('./notes.js', notes);
