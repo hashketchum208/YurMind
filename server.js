@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const api = require("./routes/index.js");
+const api = require("./routes/index");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -23,9 +23,9 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
-app.get("./db/db.json", (req, res) =>
-  res.sendFile(path.join(__dirname, "./db/db.json"))
-);
+// app.get("/db.json", (req, res) =>
+//   res.sendFile(path.join(__dirname, "./db/db.json"))
+// );
 
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
