@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const api = require("./routes/notes");
+const api = require("./routes/index.js");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -30,7 +30,3 @@ app.get("./db/db.json", (req, res) =>
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
-
-// sequelize.sync({ force: false }).then(() => {
-//   app.listen(PORT, () => console.log('Now listening on port ' + PORT));
-// });
