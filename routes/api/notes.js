@@ -3,7 +3,7 @@ const fb = require('express').Router();
 const fs = require('fs');
 const uuid = require('uuid');
 
-fb.post('/api/notes', (req, res) => {
+fb.post('./api/notes', (req, res) => {
   console.info(`${req.method} request to add a new note`);
   const { title, text } = req.body;
   if (title && text) {
