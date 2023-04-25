@@ -13,5 +13,3 @@ API GET routes were also created to read the `db.json` file and return all saved
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-## Views
